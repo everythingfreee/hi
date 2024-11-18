@@ -362,8 +362,16 @@
         // Music Control
         const audio = new Audio('song.mp4');
         audio.loop = true;
-        window.onload = () => {
+        document.body.addEventListener("click", () => {
             audio.play();
+        });
+        window.onload = () => {
+            Swal.fire({
+                title: 'Birthday!',
+                text: 'From your brother!',
+                icon: 'info',
+                confirmButtonText: 'Go'
+            })
         };
 
 
